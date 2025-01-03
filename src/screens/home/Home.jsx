@@ -87,7 +87,7 @@ const Home = () => {
                 <div className="contact">
                     <span>Mobile No. - 9374937238</span>
                     <span>Address. - Kolaghat</span>
-                    <span>Email. - dasuttam2320@gmail.com</span>
+                    <span>Email. - worldkingofficial@gmail.com</span>
                 </div>
             </div>
             <div className="live-tickets">
