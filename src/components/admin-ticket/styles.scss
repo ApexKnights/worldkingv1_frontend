@@ -1,0 +1,75 @@
+@use "../../Sass/var" as colors;
+
+.admin-tickets,
+.admin-ticket-highlight {
+  min-height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-direction: column;
+  background-color: colors.$third;
+  color: #000;
+  width: 25%;
+  position: relative;
+  border-radius: 20px;
+  @media (max-width: 768px) {
+    width: 95%;
+  }
+  .date {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    padding: 4px 6px;
+    color: #fff;
+    border-radius: 0px 0px 10px 10px;
+    background-color: colors.$secondary;
+  }
+  .live {
+    position: absolute;
+    top: 0;
+    right: 10%;
+    padding: 4px 6px;
+    color: #fff;
+    border-radius: 0px 0px 10px 10px;
+    background-color: rgb(40, 156, 40);
+  }
+  .times {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .butts {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+
+    button {
+      padding: 6px;
+      outline: none;
+      border: none;
+      background-color: colors.$secondary;
+      color: #fff;
+      &:nth-child(2) {
+        background-color: rgb(221, 221, 33);
+        color: #000;
+      }
+      &:nth-child(3) {
+        background-color: rgb(38, 189, 88);
+      }
+      &:nth-child(4) {
+        background-color: rgb(184, 54, 45);
+      }
+    }
+    .rfl {
+      background-color: rgb(184, 54, 45);
+    }
+  }
+}
+
+.admin-ticket-highlight {
+  background-color: rgb(250, 250, 91);
+}

@@ -1,0 +1,46 @@
+@use "../../Sass/var" as colors;
+
+.add-ticket {
+  background-color: colors.$secondary;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+  color: #fff;
+
+  form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    input {
+      width: 60%;
+      padding: 14px;
+    }
+    .from,
+    .to {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .make-live {
+      margin: 20px 0px;
+      padding: 10px;
+      background-color: rgb(27, 167, 27);
+      cursor: pointer;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 20px;
+      background-color: colors.$primary;
+      outline: none;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+}

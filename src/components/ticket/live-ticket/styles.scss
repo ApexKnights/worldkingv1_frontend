@@ -1,0 +1,55 @@
+@use "../../../Sass/var" as color;
+
+.ticket-box {
+  width: 40%;
+  min-height: 200px;
+  background-color: color.$third;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #000;
+  gap: 12px;
+  @media (max-width: 768px) {
+    width: 95%;
+  }
+  h2 {
+    font-size: 35px;
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
+  }
+  h1 {
+    font-size: 45px;
+    @media (max-width: 768px) {
+      font-size: 25px;
+    }
+  }
+  .times {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
+    @media (max-width: 500px) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  .date {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    padding: 12px;
+    background-color: color.$primary;
+    color: #fff;
+    border-radius: 0px 0px 20px 20px;
+    @media (max-width: 768px) {
+      font-size: 11px;
+      padding: 10px;
+    }
+  }
+}
