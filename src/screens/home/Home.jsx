@@ -86,7 +86,7 @@ const Home = () => {
                 <h1>Welcome to World King, Fastest Satta Result Site</h1>
                 <div className="contact">
                     <span>Mobile No. - 9374937238</span>
-                    <span>Address. - Kolaghat</span>
+                    <span>Address. - Tarkeswar</span>
                     <span>Email. - worldkingofficial@gmail.com</span>
                 </div>
             </div>
