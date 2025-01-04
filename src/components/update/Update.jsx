@@ -43,8 +43,8 @@ const Update = ({ t, setEditModal }) => {
             <h1>Update</h1>
             <input type="text" placeholder='Name Of Game' value={game} onChange={(e) => setGame(e.target.value)} />
             <input type="text" placeholder='Ticket' value={result} onChange={(e) => setResult(e.target.value)} />
-            <span>From :-</span><input type="time" placeholder='Time From' value={from} onChange={(e) => setFrom(e.target.value)} />
-            <span>To :-</span><input type="time" placeholder='Time To' value={to} onChange={(e) => setTo(e.target.value)} />
+            <span>From :-</span><input type="text" placeholder='Time From' value={from} onChange={(e) => setFrom(e.target.value)} />
+            <span>To :-</span><input type="text" placeholder='Time To' value={to} onChange={(e) => setTo(e.target.value)} />
             {
                 loading ? <h4>Updating ..please wait ..</h4> : <button onClick={updateForm}>Update Details</button>
             }

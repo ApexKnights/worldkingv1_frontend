@@ -1,6 +1,7 @@
 @use "../../../Sass/var" as color;
 
-.ticket-box-all {
+.ticket-box-all,
+.ticket-box-all-highlight {
   width: 40%;
   min-height: 200px;
   background-color: color.$secondary;
@@ -52,4 +53,10 @@
       padding: 9px;
     }
   }
+}
+
+.ticket-box-all-highlight {
+  background-color: #f5f547;
+  color: #000;
+  box-shadow: 1px 1px 9px #ddd;
 }

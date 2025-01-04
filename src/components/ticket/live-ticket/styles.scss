@@ -1,6 +1,7 @@
 @use "../../../Sass/var" as color;
 
-.ticket-box {
+.ticket-box,
+.highlight-ticket-box {
   width: 40%;
   min-height: 200px;
   background-color: color.$third;
@@ -52,4 +53,8 @@
       padding: 10px;
     }
   }
+}
+
+.highlight-ticket-box {
+  background-color: rgb(245, 245, 71);
 }

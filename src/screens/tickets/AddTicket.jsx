@@ -52,11 +52,11 @@ const AddTicket = () => {
                 <input type="text" placeholder='Enter Result' onChange={(e) => setResult(e.target.value)} />
                 <div className="from">
                     <label className='text-from'>From : -</label>
-                    <input type="time" onChange={(e) => setFrom(e.target.value)} />
+                    <input type="text" placeholder='Write Time one' onChange={(e) => setFrom(e.target.value)} />
                 </div>
                 <div className="to">
                     <label className='text-to'>to : -</label>
-                    <input type="time" onChange={(e) => setTo(e.target.value)} />
+                    <input type="text" placeholder='Write Time two' onChange={(e) => setTo(e.target.value)} />
                 </div>
                 <span className='make-live' onClick={makeLive}>Make It Live</span>
                 {

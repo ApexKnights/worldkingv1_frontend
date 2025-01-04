@@ -116,12 +116,12 @@ const AdminTickets = ({ tick }) => {
         <>
             <div className={tick.highlight ? "admin-ticket-highlight" : "admin-tickets"}>
                 {tick.live === true ? <h4 className='live'>Live</h4> : null}
-                <h3 className="date">{tick.createdAt.slice(0, 10)}</h3>
+                <h3 className="date">{tick.updatedAt.slice(0, 10)}</h3>
                 <h1>{tick.game}</h1>
                 <h1>{tick.result}</h1>
                 <div className="times">
-                    <span>{tick.from} {tick.from.charAt(1) > 2 ? "Pm" : "Am"}</span>
-                    <span>{tick.to} {tick.to.charAt(1) > 2 ? "Pm" : "Am"}</span>
+                    <span>{tick.from} </span>
+                    <span>{tick.to}</span>
                 </div>
                 {
                     loading ? <h3>Working on it ......</h3> : <div className="butts">
