@@ -94,7 +94,7 @@ const Home = () => {
                 <h2 className='t-head'>Get All Your Live Tickets Here</h2>
                 <div className="live-ticket-box">
                     {
-                        loading ? <h2>Loading Live results ....</h2> :
+                        loading ? <h2 style={{ color: "#fff" }}>Loading Live results ....</h2> :
                             liveticket.length === 0 ? <h4 style={{ color: "#fff" }}>No Live Results</h4> :
                                 liveticket?.map(lives => (
                                     <LiveTickets key={lives._id} lives={lives} />
