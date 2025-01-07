@@ -94,10 +94,11 @@ const Home = () => {
                 <h2 className='t-head'>Get All Your Live Tickets Here</h2>
                 <div className="live-ticket-box">
                     {
-                        liveticket.length === 0 ? <h4 style={{ color: "#fff" }}>No Live Results</h4> :
-                            liveticket?.map(lives => (
-                                <LiveTickets key={lives._id} lives={lives} />
-                            ))
+                        loading ? <h2>Loading Live results ....</h2> :
+                            liveticket.length === 0 ? <h4 style={{ color: "#fff" }}>No Live Results</h4> :
+                                liveticket?.map(lives => (
+                                    <LiveTickets key={lives._id} lives={lives} />
+                                ))
                     }
                 </div>
             </div>
@@ -105,10 +106,11 @@ const Home = () => {
                 <h2 className='t-head'>Get All Your Results Here</h2>
                 <div className="all-ticket-box">
                     {
-                        allticket.length === 0 ? <h4 >No Live Results</h4> :
-                            allticket?.map(all => (
-                                <AllTickets key={all._id} all={all} />
-                            ))
+                        loading2 ? <h2>Loading results ....</h2> :
+                            allticket.length === 0 ? <h4 >No Live Results</h4> :
+                                allticket?.map(all => (
+                                    <AllTickets key={all._id} all={all} />
+                                ))
                     }
 
                 </div>
