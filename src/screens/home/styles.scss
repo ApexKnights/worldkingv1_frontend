@@ -70,7 +70,7 @@
       }
     }
     h1 {
-      font-size: 55px;
+      font-size: 45px;
       @media (max-width: 768px) {
         font-size: 35px;
       }
@@ -79,7 +79,7 @@
       }
     }
     img {
-      height: 150px;
+      height: 80px;
       @media (max-width: 768px) {
         height: 90px;
       }
@@ -88,13 +88,66 @@
       display: flex;
       align-items: center;
       gap: 40px;
-      font-size: 25px;
+      font-size: 20px;
       @media (max-width: 768px) {
         font-size: 15px;
       }
       @media (max-width: 500px) {
         flex-direction: column;
         gap: 20px;
+      }
+    }
+  }
+  .matka-live {
+    padding: 20px 0px;
+    text-align: center;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    .head-m {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      h1,
+      h4 {
+        font-size: 25px;
+      }
+      span {
+        padding: 7px 10px;
+        background-color: #fff;
+        border-radius: 10px;
+        animation: lightPulse 3s infinite alternate;
+      }
+    }
+  }
+  .notice {
+    background-color: #364167;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .notice-box {
+      border: 2px solid #f37470;
+      border-radius: 20px;
+      width: 90%;
+      height: 350px;
+      .box-head-notice {
+        background-color: #f5f5f5;
+        border-radius: 20px 20px 0px 0px;
+        padding: 8px 0px;
+        text-align: center;
+      }
+      .notice-text {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 18px;
+        color: #fff;
       }
     }
   }
@@ -136,5 +189,90 @@
       gap: 20px;
       flex-direction: column;
     }
+  }
+  .free-game-zone {
+    background-color: #f37470;
+    padding: 50px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    h3 {
+      padding: 20px 0px;
+      background-color: #364167;
+      border-radius: 20px;
+      color: #fff;
+      text-align: center;
+    }
+    .heading-zone {
+      background-color: #364167;
+      padding: 20px 0px;
+      background-color: #364167;
+      border-radius: 20px;
+      color: #fff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .game-zone-games {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      .z-game {
+        width: 45%;
+        border: 3px solid #03f761;
+        border-radius: 20px;
+        padding: 10px;
+        h2 {
+          padding: 10px;
+          background-color: #03f761;
+          border-radius: 20px;
+          color: #fff;
+          text-align: center;
+        }
+        .z-data {
+          margin-top: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          gap: 10px;
+          p {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes lightPulse {
+  0% {
+    background-color: #fd261f; /* soft yellow */
+    box-shadow: 0 0 10px #fd261f;
+  }
+  50% {
+    background-color: #0167cc; /* soft blue */
+    box-shadow: 0 0 15px #0167cc;
+  }
+  100% {
+    background-color: #03f761; /* soft green */
+    box-shadow: 0 0 20px #03f761;
+  }
+}
+@keyframes lightPulse2 {
+  0% {
+    background-color: #fa4f49; /* soft yellow */
+    box-shadow: 0 0 10px #fa4f49;
+  }
+  50% {
+    background-color: #3f9fff; /* soft blue */
+    box-shadow: 0 0 15px #3f9fff;
+  }
+  100% {
+    background-color: #46f88b; /* soft green */
+    box-shadow: 0 0 20px #46f88b;
   }
 }

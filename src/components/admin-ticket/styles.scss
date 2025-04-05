@@ -13,8 +13,26 @@
   width: 25%;
   position: relative;
   border-radius: 20px;
+  padding: 15px 10px;
   @media (max-width: 768px) {
     width: 95%;
+  }
+  .add-panel,
+  .open-panel {
+    position: absolute;
+    top: 0;
+    right: 8%;
+    padding: 4px;
+    color: #fff;
+    background-color: #670380;
+    outline: none;
+    border: none;
+    border-radius: 0px 0px 10px 10px;
+    font-size: 16px;
+    text-decoration: none;
+  }
+  .open-panel {
+    background-color: colors.$secondary;
   }
   .date {
     position: absolute;

@@ -16,6 +16,7 @@ import Swal from 'sweetalert2'
 const Home = () => {
     const [liveticket, setLiveTicket] = useState([])
     const [allticket, setAllTicket] = useState([])
+    const [notices, setNotices] = useState(null)
     const [loading, setLoading] = useState(false)
     const [loading2, setLoading2] = useState(false)
     const { user } = useContext(UserContext)
@@ -58,6 +59,19 @@ const Home = () => {
         }
     }
 
+    const getNotice = async () => {
+        try {
+            const res = await axios.get(`${server}/notice/get-notice`, { withCredentials: true })
+            setNotices(res?.data?.data)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+
+    useEffect(() => {
+        getNotice()
+    }, [])
     useEffect(() => {
         fetchliveTickets();
         fetchAllTickets();
@@ -90,6 +104,36 @@ const Home = () => {
                     <span>Email. - worldkingofficial@gmail.com</span>
                 </div>
             </div>
+            <div className="matka-live">
+                <div className="head-m">
+                    <span>new</span>
+                    <h1>Live Results</h1>
+                </div>
+                <div className="head-m">
+                    <span>new</span>
+                    <h4>Get Fastest Live Matka Results</h4>
+                </div>
+            </div>
+            {
+                notices?.notice1.length === 0 && notices?.notice2.length === 0 && notices?.notice3.length === 0 ? null : <div className="notice">
+                    <div className="notice-box">
+                        <div className="box-head-notice">
+                            <h1>🌟 Notice 🌟</h1>
+                        </div>
+                        <div className="notice-text">
+                            {notices?.notice1?.length === 0 ? null : <p>{notices?.notice1}
+                            </p>}
+                            {notices?.notice2?.length === 0 ? null : <p>{notices?.notice2}
+                            </p>}
+                            {notices?.notice3?.length === 0 ? null : <p>{notices?.notice3}
+                            </p>}
+
+
+                        </div>
+                    </div>
+                </div>
+            }
+
             <div className="live-tickets">
                 <h2 className='t-head'>Get All Your Live Tickets Here</h2>
                 <div className="live-ticket-box">
@@ -115,6 +159,59 @@ const Home = () => {
 
                 </div>
             </div>
+            {/* <div className="free-game-zone">
+                <h3>Free Game Zone Open Close</h3>
+                <div className="heading-zone">
+                    <h2>Date - 05/04/2025</h2>
+                    <h2>Free Guessing Daily Open To Close Fix Ank</h2>
+                </div>
+                <div className="game-zone-games">
+                    <div className="z-game">
+                        <h2>Milan Morning</h2>
+                        <div className="z-data">
+                            <p>1-6-3-8</p>
+                            <p>1-6-3-8</p>
+                            <p>1-6-3-8</p>
+                            <p>1-6-3-8</p>
+                            <p>1-6-3-8</p>
+                            <p>1-6-3-8</p>
+                        </div>
+                    </div>
+                    <div className="z-game">
+                        <h2>Milan Morning</h2>
+                        <div className="z-data">
+                            <p>1-6-3-8</p>
+                            <p>1-6-3-8</p>
+                            <p>1-6-3-8</p>
+                            <p>1-6-3-8</p>
+                            <p>1-6-3-8</p>
+                            <p>1-6-3-8</p>
+                        </div>
+                    </div>
+                    <div className="z-game">
+                        <h2>Milan Morning</h2>
+                        <div className="z-data">
+                            <p>1-6-3-8</p>
+                            <p>1-6-3-8</p>
+                            <p>1-6-3-8</p>
+                            <p>1-6-3-8</p>
+                            <p>1-6-3-8</p>
+                            <p>1-6-3-8</p>
+                        </div>
+                    </div>
+                    <div className="z-game">
+                        <h2>Milan Morning</h2>
+                        <div className="z-data">
+                            <p>1-6-3-8</p>
+                            <p>1-6-3-8</p>
+                            <p>1-6-3-8</p>
+                            <p>1-6-3-8</p>
+                            <p>1-6-3-8</p>
+                            <p>1-6-3-8</p>
+                        </div>
+                    </div>
+                </div>
+            </div> */}
 
         </section>
     )

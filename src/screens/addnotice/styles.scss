@@ -1,0 +1,44 @@
+.add-notice {
+  min-height: 100vh;
+  background-color: #ef5a6f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-direction: column;
+  .head {
+    .w {
+      color: #fff;
+      text-decoration: none;
+      font-size: 30px;
+    }
+  }
+  .add-no {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    input {
+      width: 90%;
+      padding: 20px 4px;
+      outline: none;
+      border: none;
+    }
+    .butts {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      button {
+        outline: none;
+        border: none;
+        padding: 10px 20px;
+        color: #fff;
+        background-color: green;
+        &:nth-child(2) {
+          background-color: red;
+        }
+      }
+    }
+  }
+}

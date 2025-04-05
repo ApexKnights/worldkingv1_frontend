@@ -53,6 +53,20 @@
       padding: 9px;
     }
   }
+  .visit-panel {
+    position: absolute;
+    top: 0%;
+    right: 5%;
+    padding: 12px;
+    background-color: color.$primary;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0px 0px 20px 20px;
+    @media (max-width: 768px) {
+      font-size: 12px;
+      padding: 9px;
+    }
+  }
 }
 
 .ticket-box-all-highlight {
