@@ -11,7 +11,9 @@ const Update = ({ t, setEditModal }) => {
     const [from, setFrom] = useState('')
     const [to, setTo] = useState('')
     const [loading, setLoading] = useState(false)
-
+    const today = new Date();
+    const days = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+    const todayDate = days[today.getDay()]
     const updateForm = async () => {
         try {
             setLoading(true)
@@ -21,6 +23,15 @@ const Update = ({ t, setEditModal }) => {
                 timer: 1500,
                 icon: "success"
             })
+            const panel = await axios.get(`${server}/tickets/panel-id-in-week/${t?._id}`, { withCredentials: true });
+            console.log(panel?.data?.panelId)
+
+            const panelupdt = await axios.post(`${server}/panel/update-panel/${t?._id}`, {
+                panelEntryId: panel?.data?.panelId,
+                field: todayDate,
+                value: result
+            }, { withCredentials: true })
+            console.log(panelupdt)
             setLoading(false)
             setEditModal(false)
         } catch (error) {

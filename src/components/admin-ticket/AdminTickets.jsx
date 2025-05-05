@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "./styles.scss"
 import Update from '../update/Update'
-import axios from 'axios'
+import axios, { Axios } from 'axios'
 import { server } from '../../main'
 import Swal from 'sweetalert2'
 import { Link } from 'react-router-dom'
@@ -12,9 +12,11 @@ const AdminTickets = ({ tick }) => {
     const [loading, setLoading] = useState(false)
     const [panelLoading, setPanelLoading] = useState(false)
     const [cPanel, setCPanel] = useState(null)
-    const editAll = (t) => {
+    const editAll = async (t) => {
         setEditModal(true)
         setUpdateGame(t)
+
+
 
     }
 
